@@ -6,20 +6,13 @@
     "license": "MIT",
     "repositories": [
         {
-            "type": "path",
-            "url": "/Volumes/www/pgvector-scout",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
             "type": "vcs",
             "url": "https://github.com/benbjurstrom/reddit-json-api"
         }
     ],
     "require": {
         "php": "^8.2",
-        "benbjurstrom/pgvector-scout": "dev-1-proof-of-concept",
+        "benbjurstrom/pgvector-scout": "0.1.0",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9"
     },
@@ -48,8 +41,7 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi",
-            "@php artisan filament:upgrade"
+            "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"

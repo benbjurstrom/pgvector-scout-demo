@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1699cde349eab6b8c479406147bcde74",
+    "content-hash": "bded7b1fde75a79e9578c37fd7836c34",
     "packages": [
         {
             "name": "benbjurstrom/pgvector-scout",
-            "version": "dev-1-proof-of-concept",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benbjurstrom/pgvector-scout.git",
+                "reference": "aed5c5a6d4cd5bf78a6bfd9b10d27a6af92659b1"
+            },
             "dist": {
-                "type": "path",
-                "url": "/Volumes/www/pgvector-scout",
-                "reference": "4f343f563952a8acf4d66be5d68b18539e7529cb"
+                "type": "zip",
+                "url": "https://api.github.com/repos/benbjurstrom/pgvector-scout/zipball/aed5c5a6d4cd5bf78a6bfd9b10d27a6af92659b1",
+                "reference": "aed5c5a6d4cd5bf78a6bfd9b10d27a6af92659b1",
+                "shasum": ""
             },
             "require": {
                 "illuminate/contracts": "^10.0||^11.0",
@@ -50,44 +56,7 @@
                     "BenBjurstrom\\PgvectorScout\\Database\\Factories\\": "database/factories/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "BenBjurstrom\\PgvectorScout\\Tests\\": "tests/",
-                    "Workbench\\App\\": "workbench/app/"
-                }
-            },
-            "scripts": {
-                "post-autoload-dump": [
-                    "@composer run prepare"
-                ],
-                "clear": [
-                    "@php vendor/bin/testbench package:purge-pgvector-scout --ansi"
-                ],
-                "prepare": [
-                    "@php vendor/bin/testbench package:discover --ansi"
-                ],
-                "build": [
-                    "@composer run prepare",
-                    "@php vendor/bin/testbench workbench:build --ansi"
-                ],
-                "start": [
-                    "Composer\\Config::disableProcessTimeout",
-                    "@composer run build",
-                    "@php vendor/bin/testbench serve"
-                ],
-                "analyse": [
-                    "vendor/bin/phpstan analyse"
-                ],
-                "test": [
-                    "vendor/bin/pest"
-                ],
-                "test-coverage": [
-                    "vendor/bin/pest --coverage"
-                ],
-                "format": [
-                    "vendor/bin/pint"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -105,10 +74,17 @@
                 "laravel",
                 "pgvector-scout"
             ],
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/benbjurstrom/pgvector-scout/issues",
+                "source": "https://github.com/benbjurstrom/pgvector-scout/tree/v0.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Ben Bjurstrom",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-11-16T16:05:11+00:00"
         },
         {
             "name": "brick/math",
@@ -9111,9 +9087,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "benbjurstrom/pgvector-scout": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

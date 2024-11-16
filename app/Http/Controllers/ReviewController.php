@@ -37,7 +37,7 @@ class ReviewController extends Controller
     {
         $review = Review::findOrFail($id);
 
-        $relatedReviews = Review::search($review->embedding->embedding)
+        $relatedReviews = Review::search($review->embedding->vector)
             ->take(7)
             ->get();
 

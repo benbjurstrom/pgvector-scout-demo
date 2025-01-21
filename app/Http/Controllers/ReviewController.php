@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Review;
+use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
@@ -14,11 +14,11 @@ class ReviewController extends Controller
     {
         $query = $request->query('query');
 
-        if($query){
+        if ($query) {
             $reviews = Review::search($query)
                 ->paginate(50)
                 ->withQueryString();
-        }else{
+        } else {
             $reviews = Review::query()
                 ->orderBy('id', 'asc')
                 ->paginate(50);
@@ -26,7 +26,7 @@ class ReviewController extends Controller
 
         return view('reviews.index', [
             'reviews' => $reviews,
-            'query' => $query
+            'query' => $query,
         ]);
     }
 

@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use BenBjurstrom\PgvectorScout\Models\Concerns\HasEmbeddings;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
-use BenBjurstrom\PgvectorScout\Models\Concerns\HasEmbeddings;
 
 class Review extends Model
 {
@@ -29,7 +29,6 @@ class Review extends Model
     {
         return 'openai';
     }
-
 
     /**
      * Get the indexable data array for the model.

@@ -17,11 +17,6 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
-
         DB::unprepared(File::get(base_path('database/seeders/reviews.sql')));
         DB::unprepared(File::get(base_path('database/seeders/review_embeddings.sql')));
     }

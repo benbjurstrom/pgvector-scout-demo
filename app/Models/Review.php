@@ -2,31 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 use BenBjurstrom\PgvectorScout\Models\Concerns\HasEmbeddings;
 
 class Review extends Model
 {
-    use HasFactory, HasEmbeddings, Searchable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'product_id',
-        'user_id',
-        'profile_name',
-        'helpfulness_numerator',
-        'helpfulness_denominator',
-        'score',
-        'time',
-        'summary',
-        'text',
-    ];
+    use HasEmbeddings, Searchable;
 
     /**
      * The attributes that should be cast.
@@ -39,6 +21,14 @@ class Review extends Model
         'score' => 'integer',
         'time' => 'datetime',
     ];
+
+    /**
+     * Get the name of the index associated with the model.
+     */
+    public function searchableAs(): string
+    {
+        return 'openai';
+    }
 
 
     /**

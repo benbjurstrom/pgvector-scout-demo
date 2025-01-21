@@ -4,26 +4,20 @@
     "description": "The skeleton application for the Laravel framework.",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/benbjurstrom/reddit-json-api"
-        }
-    ],
     "require": {
         "php": "^8.2",
-        "benbjurstrom/pgvector-scout": "0.1.0",
-        "laravel/framework": "^11.9",
-        "laravel/tinker": "^2.9"
+        "benbjurstrom/pgvector-scout": "0.2.0",
+        "laravel/framework": "^11.39",
+        "laravel/tinker": "^2.10"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
-        "laravel/pail": "^1.1",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.26",
-        "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.1",
-        "pestphp/pest": "^3.5",
+        "fakerphp/faker": "^1.24.1",
+        "laravel/pail": "^1.2.1",
+        "laravel/pint": "^1.20",
+        "laravel/sail": "^1.40",
+        "mockery/mockery": "^1.6.12",
+        "nunomaduro/collision": "^8.5",
+        "pestphp/pest": "^3.7.2",
         "pestphp/pest-plugin-laravel": "^3.0"
     },
     "autoload": {
@@ -73,6 +67,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": false
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }

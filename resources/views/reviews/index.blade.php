@@ -2,10 +2,10 @@
     <div class="py-12">
         <div class="mx-auto sm:px-6 lg:px-8">
             <div class="p-6 text-gray-900">
-                <div class="flex items-center justify-between mb-6">
+                <div class="sm:flex items-center justify-between mb-6">
                     <h2 class="text-2xl font-semibold mb-4">Reviews</h2>
 
-                    <div class="flex gap-2 mb-4">
+                    <div class="grid grid-cols-2 gap-2 lg:grid-cols-5 text-center">
                         <a href="{{ request()->fullUrlWithQuery(['query' => null]) }}"
                            class="px-4 py-2 text-sm font-medium rounded-md {{ !request()->query('query') ? 'bg-gray-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200' }}">
                             All Reviews

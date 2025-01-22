@@ -18,8 +18,27 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans text-gray-900 antialiased">
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-    <div class="w-full sm:max-w-6xl mt-6 px-2 sm:px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-2xl">
+<div class="min-h-screen flex flex-col sm:justify-center items-center">
+    <div class="w-full sm:max-w-6xl mt-6 px-2 sm:px-6 py-4 overflow-hidden sm:rounded-2xl">
+
+        <div class="sm:flex items-center justify-between px-4 mb-2">
+            <div>
+                <div class="font-medium text-zinc-800 dark:text-white text-2xl">Pgvector Scout Demo Application</div>
+                <a class="text-sm text-zinc-500 dark:text-white/70" href="https://github.com/benbjurstrom/pgvector-scout-demo">
+                    github.com/benbjurstrom/pgvector-scout-demo
+                </a>
+            </div>
+            <div></div>
+        </div>
+
+        <div class="overflow-x-auto px-4">
+            <div class="m-auto max-w-full flex justify-center">
+                <div class="w-full">
+                    <div class="border-0 bg-zinc-800/15 dark:bg-white/20 h-px w-full"></div>
+                </div>
+            </div>
+        </div>
+
         {{ $slot }}
     </div>
 </div>
